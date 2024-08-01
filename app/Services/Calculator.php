@@ -2,11 +2,9 @@
 
 namespace App\Services;
 
-use App\Models\User;
-
 class Calculator
 {
-    public function __construct(User $user)
+    public function __construct(protected string $name)
     {
     }
 
