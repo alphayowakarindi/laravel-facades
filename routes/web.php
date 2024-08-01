@@ -1,9 +1,8 @@
 <?php
 
-use App\Services\Calculator;
+use App\Facades\Calculator;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function (Calculator $calculator) {
-    dd(app()->make(Calculator::class), app()->make(Calculator::class));
-    // dd($calculator->add(1, 1));
+Route::get('/', function () {
+    dd(Calculator::add(1, 2));
 });
